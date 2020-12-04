@@ -10,9 +10,7 @@ def is_valid(p):
     if len(p) == 8 or (len(p) == 7 and 'cid' not in p):
         try:
             assert 1920 <= int(p['byr']) <= 2002, 'byr'
-            assert len(p['byr']) == 4, 'byr'
             assert 2010 <= int(p['iyr']) <= 2020, 'iyr'
-            assert len(p['iyr']) == 4, 'iyr'
             assert 2020 <= int(p['eyr']) <= 2030, 'eyr'
             assert len(p['eyr']) == 4, 'eyr'
             h,u = HEIGHT_RE.match(p['hgt']).groups()
